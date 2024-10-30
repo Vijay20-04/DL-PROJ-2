@@ -11,6 +11,9 @@ from time import sleep
 model_path_1 = "gman.h5"  # Update with the correct path to your .h5 file
 model_1 = tf.keras.models.load_model(model_path_1)
 
+with tf.device('/cpu:0'):
+    model_1.compile()
+
 # Dehazing function for Model 1 using the loaded .h5 model
 def dehaze_model_1(image):
     # Preprocess image for model input
