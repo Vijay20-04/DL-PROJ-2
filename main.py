@@ -8,7 +8,7 @@ from tensorflow.keras.layers import *
 from time import sleep
 
 # Load the .h5 model (for Model 1)
-model_path_1 = "temp.h5"  # Update with the correct path to your .h5 file
+model_path_1 = "final.h5"  # Update with the correct path to your .h5 file
 model_1 = tf.keras.models.load_model(model_path_1)
 
 with tf.device('/cpu:0'):
